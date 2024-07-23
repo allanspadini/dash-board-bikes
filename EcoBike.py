@@ -6,6 +6,7 @@ def main():
     st.set_page_config(
         page_title="EcoBike",
         page_icon="🚲",
+        layout='wide'
     )
 
     st.markdown('''
