@@ -1,6 +1,8 @@
 import streamlit as st
 import joblib
 import os
+from prophet import Prophet
+
 
 @st.cache_resource
 def carrega_modelo():
