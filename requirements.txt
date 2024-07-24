@@ -1,4 +1,4 @@
 joblib==1.4.2
 plotly
 prophet
-numpy==1.21.0
+numpy==1.26.4
