@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-
+import os
 
 @st.cache_resource
 def carrega_modelo():
@@ -9,7 +9,11 @@ def carrega_modelo():
 
       Returns:
          The loaded machine learning model.
+
       """
+      file_path = 'assets/modelo_prophet.pkl'
+      if not os.path.exists(file_path):
+            raise FileNotFoundError(f"Arquivo não encontrado: {file_path}")
       return joblib.load('assets/modelo_prophet.pkl')
 
 def main():
