@@ -52,10 +52,10 @@ def main():
         st.metric(label="Média de bicicletas por mês", value=int(total_bicicletas_por_mes['total_bicicletas'].mean()),delta=delta)
 
     with col3:
-        st.metric(label="Desvio padrão", value=int(df['cnt'].std()))
+        st.metric(label="Desvio padrão em meses", value=int(df['cnt'].std()))
         
     with col4:
-        st.metric(label="Maior número de bicicletas em um dia ", value=int(df['cnt'].max()))
+        st.metric(label="Maior número de bicicletas em uma hora ", value=int(df['cnt'].max()))
 
     fig = px.bar(df, x='month', y='cnt',
              title='Bicicletas Alugadas por Mês',
